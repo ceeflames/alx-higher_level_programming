@@ -7,5 +7,5 @@ def print_matrix_integer(matrix=[[]]):
         current_row = row
         if not current_row:
             print()
-        for element in current_rom:
+        for element in current_row:
             print("{:d}".format(element), end=" " if element != current_row[-1] else '\n')
