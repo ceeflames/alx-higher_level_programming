@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     if matrix is None:
-        matrix = []
+        return (None)
 
     for row in matrix:
         current_row = row
