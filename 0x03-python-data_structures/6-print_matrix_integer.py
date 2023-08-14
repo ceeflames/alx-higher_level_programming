@@ -8,4 +8,7 @@ def print_matrix_integer(matrix=[[]]):
         if not current_row:
             print()
         for element in current_row:
-            print("{:d}".format(element), end=" " if element != current_row[-1] else '\n')
+            if element != current_row[-1]:
+                print("{:d}".format(element), end=" ")
+            else:
+                print("{:d}".format(element))
