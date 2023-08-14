@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix is None:
+    if len(matrix) == 0 or matrix is None:
         return (None)
 
     for row in matrix:
@@ -8,4 +8,4 @@ def print_matrix_integer(matrix=[[]]):
         if not current_row:
             print()
         for element in current_row:
-            print("{:d}".format(element), end=" " if element != current_row[-1] else '\n')
+            print("{:d}".format(element), end=" " if element != current_row[- 1] else '\n')
