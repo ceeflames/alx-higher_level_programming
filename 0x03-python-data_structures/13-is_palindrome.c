@@ -7,14 +7,14 @@
  *
  * Return: 0 if it is not, 1 if it is
  */
-int is_palindrome(listint_t **head);
+int is_palindrome(listint_t **head)
 {
 	int i, j, k, li;
 	int *name;
 	listint_t *now;
 	listint_t *new;
 
-	*now = *head;
+	now = *head;
 	if (*head == NULL)
 		return (1);
 	i = 0;
@@ -27,15 +27,15 @@ int is_palindrome(listint_t **head);
 	if (name == NULL)
 		return (0);
 	new = *head;
-	for (j = 0; new != NULL && i < n; i++)
+	for (j = 0; new != NULL && j < i; j++)
 	{
-		name[i] = new->i;
+		name[j] = new->n;
 		new = new->next;
 	}
-	for (j = 0; j < i/2; j++)
+	for (k = 0; k < i/2; k++)
 	{
-		li = i - j - 1;
-		if (name[j] != name[li])
+		li = i - k - 1;
+		if (name[k] != name[li])
 		{
 			free(name);
 			return (0);
