@@ -5,9 +5,9 @@ def safe_print_list(my_list=[], x=0):
     count = 0
     try:
 
-        for elements in my_list:
+        for elements in range(x):
             if count < x:
-                print(element, end=" ")
+                print("{}" format.my_list(element), end=" ")
                 count += 1
 
         print()
