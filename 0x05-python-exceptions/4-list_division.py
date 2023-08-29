@@ -5,7 +5,7 @@ def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     for value in range(list_length):
         try:
-            new-list.append(my_list_1[value] / my_list_2[value])
+            new_list.append(my_list_1[value] / my_list_2[value])
         except (IndexError):
             print("out of range")
             new_list.append(0)
@@ -13,7 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print("division by 0")
             new_list.append(0)
         except (TypeError):
-            print("wrong typoe")
+            print("wrong type")
             new_list.append(0)
         finally:
             pass
