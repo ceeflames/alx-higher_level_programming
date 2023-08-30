@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
-"""Define a square"""
+"""Square: Define a square"""
 
 
 class Square:
+
     """
-    A class square
+    Square: A class square
+
+    size: size of the square
     """
 
 
