@@ -5,6 +5,4 @@ Module composed by a function that defines a rectangle
 
 
 class Rectangle:
-    """
-    rectangle class 
-    """
+    pass
