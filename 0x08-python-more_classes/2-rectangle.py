@@ -3,6 +3,10 @@
     A MODULE COMPOSED BY  A FUNCTION THAT DEFINES RETANGLE
 """
 class Rectangle:
+    """
+        A rectangle class
+        width and height as attr
+    """
 
     def __init__(self, width=0, height=0):
         self.width = width
