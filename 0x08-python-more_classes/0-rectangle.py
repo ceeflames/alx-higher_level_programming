@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-Module composed by a function that defines a rectangle
+    Module composed by a function that defines a rectangle
 """
 
 
 class Rectangle:
-    pass
+    """
+        An empty class rectangle
+    """
