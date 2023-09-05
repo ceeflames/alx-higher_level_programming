@@ -4,8 +4,9 @@
 """
 class Rectangle:
     """
-        A rectangle class
-        width and height as attr
+        Rectangle: A rectangle class
+        width: defines the width
+        height: defines the height
     """
 
     def __init__(self, width=0, height=0):
