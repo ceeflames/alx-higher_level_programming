@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    A MODULE COMPOSED BY  A FUNCTION THAT DEFINES RETANGLE
+    Module composed by a rectangle function
 """
 
 
