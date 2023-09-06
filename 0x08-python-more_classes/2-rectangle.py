@@ -51,10 +51,10 @@ class Rectangle:
 
     def perimeter(self):
         """
-            calcylate the perimeter of the rectangle
+            calculate the perimeter of the rectangle
         """
         if self.__width == 0 or self.__height == 0:
             return (0)
         else:
-            return 2 * (self.__width + self.__height)
+            return (2 * (self.__width + self.__height))
 
