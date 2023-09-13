@@ -4,6 +4,6 @@
 
 def write_file(filename="", text=""):
     with open(filename, 'w', ebcoding="utf-8") as f:
-        writt_en = file.write(text)
+        writt_en = f.write(text)
 
     return writt_en
