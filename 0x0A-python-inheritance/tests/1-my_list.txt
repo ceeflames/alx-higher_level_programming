@@ -67,3 +67,12 @@ Check if print_sorted() returns a new list
     [1, 2, 7]
     >>> my_list
     [7, 1, 2]
+
+Type of the print_sorted method
+    >>> my_list = MyList()
+    >>> type(my_list.print_sorted)
+    <class 'method'>
+
+MyList is a subclass of list
+    >>> issubclass(MyList, list)
+    True
