@@ -3,6 +3,7 @@
 
 
 def write_file(filename="", text=""):
+    """write text in filename with utf-8"""
     with open(filename, 'w', ebcoding="utf-8") as f:
         writt_en = f.write(text)
 
