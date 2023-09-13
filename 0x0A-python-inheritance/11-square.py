@@ -2,7 +2,7 @@
 """A square class that inherits from Rectangle"""
 
 
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -15,7 +15,7 @@ class Square(Rectangle):
 
     def area(self):
         """Area of the square"""
-        area = self.--size * self.__size
+        area = self.__size * self.__size
         return area
 
     def __str__(self):
