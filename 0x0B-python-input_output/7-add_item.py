@@ -2,6 +2,7 @@
 """scripts that adds all arguments to a python list"""
 
 
+import json
 import sys
 from os.path import exists
 
