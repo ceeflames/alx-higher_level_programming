@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""function that returns the dictionary description with simeple data structure"""
+"""
+    function that returns the dictionary
+    description with simeple data structure
+"""
 
 
 def class_to_json(obj):
