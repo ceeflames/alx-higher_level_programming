@@ -39,3 +39,12 @@ class Square(Rectangle):
         """magic method returns strings"""
         return ("[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width))
+
+    def to_dictionary(self):
+        """Dictionary representation of the square"""
+        return {
+                "id" : self.id,
+                "size" : self.size,
+                "x" : self.x,
+                "y" : self.y
+                }
