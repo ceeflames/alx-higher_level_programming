@@ -12,6 +12,17 @@ class Square(Rectangle):
         """initializes"""
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        """Getter for the size attribute"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """setter for the size attribute"""
+        self.width = value
+        self.height = value
+
     def __str__(self):
         """magic method returns strings"""
         return ("[Square] ({}) {}/{} - {}".format(
