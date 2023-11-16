@@ -1,3 +1,4 @@
 #!/usr/bin/node
-
-module.exports = class rectangle {};
+class Rectangle {
+}
+module.exports = Rectangle;
