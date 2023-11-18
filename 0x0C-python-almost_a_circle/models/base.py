@@ -2,7 +2,7 @@
 """First class base"""
 
 
-import json
+import json, csv
 
 
 class Base:
@@ -42,7 +42,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string representation json_string"""
-        if json_string is None:
+        if json_string is None or len(json_string) == 0:
             return []
         else:
             return json.loads(json_string)
@@ -68,5 +68,39 @@ class Base:
                 json_str = f.read()
                 obj_dicts = cls.from_json_string(json_str)
                 return [cls.create(**obj_dict) for obj_dict in obj_dicts]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + ".csv"
+
+        with open(filename, mode="w", encoding="utf-8") as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ == "Square":
+                fieldnames = ["id", "size", "x", "y"]
+
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for obj in list_objs:
+                writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes in CSV"""
+        filename = cls.__name__ + ".csv"
+        instance = []
+
+        try:
+            with open(filename, mode="r", encoding="utf-8") as f:
+                content = f.read()
+                content = cls.from_json_string(content)
+
+                for contents in content:
+                    instance.append(cls.create())
+
+                return instance
         except FileNotFoundError:
             return []
