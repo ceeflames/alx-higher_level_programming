@@ -25,14 +25,18 @@ if __name__ == '__main__':
             )
 
     with db.cursor() as cur:
-        cur.execute(" SELECT * FROM states \
-                WHERE name LIKE BINARY %(name)s \
-                ORDER BY states.id ASC", {
-                    'name': argv[4]
+        cur.execute("""
+        SELECT *
+        FROM
+            states
+        WHERE
+            name LIKE BINARY %(name)s
+        ORDER BY
+        states.id ASC
+        """, {
+                'name': argv[4]
                     })
-
-                rows = cur.fetchall()
-
-                if rows is None:
-                    for row in rows:
-                        print(row)
+        rows = cur.fetchall()
+        if rows is None:
+            for row in rows:
+                print(row)
