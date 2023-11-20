@@ -25,7 +25,7 @@ if __name__ == '__main__':
             WHERE name LIKE BINARY 'N%' \
             ORDER BY states.id ASC")
 
-    rows = cur.fetchall90
+    rows = cur.fetchall()
 
     for row in rows:
         print(row)
