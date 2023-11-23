@@ -36,6 +36,6 @@ if __name__ == '__main__':
 
     results = cur.fetchall()
 
-if results is not None:
-    for row in results:
-        print(row)
+    if results is not None:
+        for row in results:
+            print(row)
