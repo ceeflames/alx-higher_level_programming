@@ -38,6 +38,7 @@ if __name__ == '__main__':
             'name': argv[4]
             })
 
-    results = cur.fetchall()
-    for row in results:
-        print(row)
+        results = cur.fetchall()
+    if results is not None:
+        for row in results:
+            print(row)
