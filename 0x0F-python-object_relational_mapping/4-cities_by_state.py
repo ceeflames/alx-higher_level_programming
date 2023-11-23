@@ -34,7 +34,7 @@ if __name__ == '__main__':
             cities.id ASC
     """)
 
-    results = cur.fetchall()
+        results = cur.fetchall()
 
     if results is not None:
         for row in results:
