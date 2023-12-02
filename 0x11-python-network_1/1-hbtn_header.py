@@ -7,7 +7,7 @@
 """
 
 if __name__ == '__mian__':
-    import urllib.request
+    import urllib
     import sys
 
     url = sys.argv[1]
