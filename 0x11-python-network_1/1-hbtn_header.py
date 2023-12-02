@@ -6,11 +6,12 @@
     found in the leader of the response
 """
 
-if __name__ == '__mian__':
-    import urllib
+if __name__ == '__main__':
+    import urllib.request
     import sys
 
     url = sys.argv[1]
     request = urllib.request.Request(url)
     with urllib.request.urlopen(request) as response:
-        print(response.getheader('X-Request-Id'))
+        x_request_id = response.getheader("X-Request-Id")
+        print(x_request_id)
