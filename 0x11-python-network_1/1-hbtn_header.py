@@ -8,9 +8,9 @@
 
 if __name__ == '__mian__':
     import urllib.request
-    from sys import argv
+    import sys
 
-    url = argv[1]
+    url = sys.argv[1]
     request = urllib.request.Request(url)
     with urllib.request.urlopen(request) as response:
         print(dict(response.header).get('X-Request-Id'))
